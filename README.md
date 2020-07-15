@@ -1,6 +1,10 @@
 # EmpDetails
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.4.
+Angular version 9.1.4.
+
+- All featues Added
+- Responsive
+- No Third Party Library used
 
 ## Development server
 

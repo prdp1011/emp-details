@@ -1,0 +1,25 @@
+.container{
+  display: flex;
+  flex-direction: column;
+  .news{
+    background: #e9e9e9;
+    border-radius: 1rem;
+    padding: 20px;
+    transition: 0.2s;
+    margin-right: 1%;
+    margin-left: 5px;
+    position: relative;
+    min-height: 900px;
+    box-shadow: 5px 15px 5px 0px #706867;
+  }
+  .display-none{
+    display: none;
+  }
+
+}
+@media  (max-width: 760px) {
+  .container .news{
+    padding: 10px;
+  }
+
+}

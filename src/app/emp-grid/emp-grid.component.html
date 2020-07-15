@@ -1,0 +1,27 @@
+<div class="header">
+    <div>
+      <input type="text" class="form-control" placeholder="Search By Employee Name" #searchTest/>
+    </div>
+    <div (click)="isView = !isView" class="view" [class.active]="isView">{{isView ? 'List': 'Grid'}} view</div>
+</div>
+
+<div class="grid-view" [class.grid]="!isView" *ngIf="dataState === 'loaded' && empDetails.length">
+  <div class="grid-view-list head" *ngIf="isView">
+    <div class="col" (click)="sort('id')"><b>Employee ID</b></div>
+    <div class="col" (click)="sort('employee_name')"><b>Employee Name</b></div>
+    <div class="col" (click)="sort('employee_salary')"><b>Employee Salary</b></div>
+    <div class="col" (click)="sort('employee_age')"><b>Employee Age</b></div>
+  </div>
+  <div class="grid-view-list body" *ngFor="let item of empDetails; trackBy: trackByItemId" (click)="modal.currentDetails(item)">
+    <div class="col">{{item.id}}</div>
+    <div class="col">{{item.employee_name}}</div>
+    <div class="col">{{item.employee_salary}}</div>
+    <div class="col">{{item.employee_age}}</div>
+  </div>
+</div>
+
+<h3 class="loader" *ngIf="dataState === 'loading'">Please wait...</h3>
+<div class="empty"  *ngIf="dataState === 'loaded' && !empDetails.length">
+  <h2>No Data</h2>
+</div>
+<app-details-modal #modal></app-details-modal>

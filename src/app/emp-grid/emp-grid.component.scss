@@ -1,0 +1,79 @@
+$contents: "Employee ID", "Employee Name", "Employee Salary", "Employee Age";
+
+
+.header{
+  display: flex;
+  justify-content: space-between;
+  div{
+    padding: 8px;
+    cursor: pointer;
+    margin: 5px;
+    input{
+      width: 100%;
+    }
+    &.view{
+      background-color: #df8787;
+      box-shadow: 6px 6px #514242;
+      color: #fff;
+      &.active{
+        background-color: #ddd0d0;
+        color: #000;
+      }
+    }
+  }
+
+}
+
+
+.grid-view-list{
+  display: flex;
+  padding: 15px;
+  margin-top: 10px;
+  background-color: #fff;
+  box-shadow: 5px 15px 5px 0px #706867;
+  flex-direction: row;
+  &.head{
+    background-color: #ff6c6c;
+  }
+  div.col{
+   flex-grow: 0;
+   flex-shrink: 0;
+   flex-basis: 25%;
+  }
+}
+.grid-view{
+  margin-top: 10px;
+  &.grid{
+    display: flex;
+    flex-basis: 100%;
+    flex-wrap: wrap;
+    .grid-view-list{
+      flex-grow: 1;
+      flex-shrink: 0;
+      flex-basis: 30%;
+      margin: 5px;
+      flex-direction: column;
+      height: 30%;
+      background: #c6c0c0;
+      div.col{
+        display: flex;
+        justify-content: space-between;
+        padding: 15px;
+        background-color: #fff;
+        margin: 1px;
+        &:before{
+          font-weight: bold;
+        }
+        @each $cont in $contents {
+          $i: index($contents, $cont);
+          &:nth-of-type(#{$i}) {
+            &:before {
+              content: $cont;
+            }
+          }
+        }
+        }
+
+      }
+  }
+}

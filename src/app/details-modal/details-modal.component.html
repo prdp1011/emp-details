@@ -1,0 +1,29 @@
+<div id="myModal" class="modal" #gal>
+  <div class="modal-content">
+    <div class="modal-header">
+      <div class="bold">Employee Details</div>
+      <div class="close" (click)="showElement(false)">&times;</div>
+    </div>
+    <div class="modal-body">
+      <div class="grid">
+        <div class="row">
+          <div class="col bold">Employee ID</div>
+          <div class="col">{{data?.id}}</div>
+        </div>
+        <div class="row">
+          <div class="col bold">Employee Name</div>
+          <div class="col">{{data?.employee_name}}</div>
+        </div>
+        <div class="row">
+          <div class="col bold">Employee Salary</div>
+          <div class="col">{{data?.employee_salary}}</div>
+        </div>
+        <div class="row">
+          <div class="col bold">Employee Age</div>
+          <div class="col">{{data?.employee_age}}</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

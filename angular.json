@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "emp-details"
+    }
+  },
+  "defaultProject": "emp-details",
+  "cli": {
+    "analytics": false
+  }
 }
