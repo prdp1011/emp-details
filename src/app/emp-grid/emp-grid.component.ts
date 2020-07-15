@@ -35,12 +35,6 @@ export class EmpGridComponent implements AfterViewInit {
   getDetailsforUi(){
     this.api.getDataFromApi().pipe(take(1)).subscribe((res: any) => {
      this.loadUiData(res);
-    }, err => {
-      // for github deployment
-      console.log(err);
-      if (err.status === 0){
-        this.getListDetailsFromJSON();
-      }
     });
 
     fromEvent(this.searchTest.nativeElement, 'keyup')
@@ -48,12 +42,6 @@ export class EmpGridComponent implements AfterViewInit {
       map((e: any) => e.target.value), distinctUntilChanged()).subscribe(res => {
       this.empDetails  = this.searchInputText(res);
     });
-  }
-
-  getListDetailsFromJSON() {
-    this.api.getDataFromConfig().pipe(take(1)).subscribe((res: any) => {
-      this.loadUiData(res);
-     });
   }
 
   loadUiData(res){
