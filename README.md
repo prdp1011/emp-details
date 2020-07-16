@@ -2,7 +2,10 @@
 
 Angular version 9.1.4.
 
-- All featues Added
+- User can convert List view to Grid view or Grid to List view.
+- Sorting on all Columns
+- Search filter 
+- Modal open for more details on every row clicked
 - Responsive
 - No Third Party Library used
 
