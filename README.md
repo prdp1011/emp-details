@@ -1,7 +1,7 @@
 # EmpDetails
 
 Angular version 9.1.4.
-Deployed on github - prdp1011.github.io/emp-details/
+Deployed on github - https://prdp1011.github.io/emp-details/
 
 ## Features
 
