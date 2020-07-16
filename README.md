@@ -1,6 +1,9 @@
 # EmpDetails
 
 Angular version 9.1.4.
+Deployed on github - prdp1011.github.io/emp-details/
+
+## Features
 
 - User can convert List view to Grid view or Grid to List view.
 - Sorting on all Columns
